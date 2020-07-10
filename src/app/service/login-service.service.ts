@@ -18,7 +18,7 @@ export class LoginServiceService {
     return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe(data => {
 
       // retorno http
-      // conversao string para json - tirando o autrhorization e o bierer - fica so o token puro
+      // conversao string para json - authorization e o bierer - split p/ token puro
       var token = (JSON.parse(JSON.stringify(data)).Authorization.split(' ')[1]);
 
       localStorage.setItem("token", token);
