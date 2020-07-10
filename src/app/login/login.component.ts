@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private loginService: LoginServiceService) { }
 
-  public login() {// a tela html chama esse login() que vai chamar o loginService onde vai acontecer todo o processo
+  public login() {// chamada da tela html
     this.loginService.login(this.usuario);
   }
 
